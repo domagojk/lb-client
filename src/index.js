@@ -14,7 +14,7 @@ function socketDriver (recycle, Rx) {
       response$.next(res.response)
     })
 
-  var socket = io('http://207.154.248.171:8000');
+  var socket = io('http://207.154.248.171');
   socket.on('state', function (data) {
     response$.next(data)
   })
