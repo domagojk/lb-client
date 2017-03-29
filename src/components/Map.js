@@ -6,7 +6,7 @@ const coords = {
   lng: 15.974650
 };
 
-const params = {v: '3.exp', key: '123'};
+const params = {v: '3.exp', key: 'AIzaSyCm9_wahM-GlBM4HDSeEF-r3VI61Tq3RYA'};
 
 const App = React.createClass({
 
