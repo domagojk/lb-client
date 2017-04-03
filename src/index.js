@@ -4,8 +4,16 @@ import Rx from 'rxjs/Rx'
 import createRecycle from 'recyclejs/react'
 import io from 'socket.io-client'
 import App from './components/App'
+import './index.css'
 
 const Recycle = createRecycle(React, Rx)
+
+window.devicesProps = {}
+
+Rx.Observable.ajax('http://207.154.248.171/devicelist')
+    .subscribe(function (res) {
+      window.devicesProps = res.response
+    })
 
 function socketDriver (recycle, Rx) {
   const response$ = new Rx.Subject()

@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.0.1",
-  "homepage": "https://domagojk.github.io/lb-client/",
+  "homepage": "./",
   "private": true,
   "devDependencies": {
     "gh-pages": "^0.12.0",
