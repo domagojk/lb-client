@@ -10,16 +10,16 @@ const Recycle = createRecycle(React, Rx)
 
 window.devicesProps = {}
 
-Rx.Observable.ajax('http://207.154.248.171/devicelist')
-    .subscribe(function (res) {
-      window.devicesProps = res.response
-    })
-
 function socketDriver (recycle, Rx) {
   const response$ = new Rx.Subject()
-  Rx.Observable.ajax('http://207.154.248.171/status?rand='+Math.random())
+  Rx.Observable.ajax('http://207.154.248.171/devicelist?rand='+Math.random())
     .subscribe(function (res) {
-      response$.next(res.response)
+      window.devicesProps = res.response
+
+      Rx.Observable.ajax('http://207.154.248.171/status?rand='+Math.random())
+        .subscribe(function (res) {
+          response$.next(res.response)
+        })
     })
 
   var socket = io('http://207.154.248.171');
