@@ -17,7 +17,7 @@ Rx.Observable.ajax('http://207.154.248.171/devicelist')
 
 function socketDriver (recycle, Rx) {
   const response$ = new Rx.Subject()
-  Rx.Observable.ajax('http://207.154.248.171/status')
+  Rx.Observable.ajax('http://207.154.248.171/status?rand='+Math.random())
     .subscribe(function (res) {
       response$.next(res.response)
     })
