@@ -2,6 +2,7 @@ import React from 'react'
 import SplitPane from 'react-split-pane'
 import GoogleMap from './Map'
 import Sidebar from './Sidebar'
+import Rx from 'rxjs/Rx'
 
 export default function DeviceMap () {
   return {
@@ -10,7 +11,21 @@ export default function DeviceMap () {
     },
 
     actions (sources) {
-      
+      return [
+        sources.selectClass('turnon')
+          .on('click')
+          .switchMap(() => Rx.Observable.ajax({
+            method: 'POST',
+            url: 'http://207.154.248.171/turnon'
+          })),
+        
+        sources.selectClass('turnoff')
+          .on('click')
+          .switchMap(() => Rx.Observable.ajax({
+            method: 'POST',
+            url: 'http://207.154.248.171/turnoff'
+          }))
+      ]
     },
 
     reducers (sources) {
@@ -46,7 +61,8 @@ export default function DeviceMap () {
                 <SplitPane split="horizontal" defaultSize={50} primary="second">
                   <Sidebar devices={state.devicesState} />
                   <div className="sidebar-bottom">
-                    <button>Uključi svijetlo!</button>
+                    <div><button className='turnon'>Uključi svijetlo!</button></div>
+                    <div><button className='turnoff'>Isključi svijetlo!</button></div>
                   </div>
               </SplitPane>
               </div>
