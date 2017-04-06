@@ -20,11 +20,22 @@ const App = React.createClass({
     let map = this.map
     
     const markers = this.props.markers
-      .map(m => new google.maps.Marker({
-        position: { lat: m.lat, lng: m.lng },
-        label: '' + m.label,
-        map
-      }))
+      .map(m => {
+        var infowindow = new google.maps.InfoWindow({
+          content: m.ustanova + ' : ' + m.label + ' C'
+        })
+        let marker = new google.maps.Marker({
+          position: { lat: parseFloat(m.lat, 10), lng: parseFloat(m.lng, 10) },
+          label: '' + m.label,
+          map
+        })
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        })
+
+        return marker
+      })
 
     if (this.markerCluster) {
       this.markerCluster.clearMarkers()
