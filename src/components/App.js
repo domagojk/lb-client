@@ -62,9 +62,9 @@ export default function DeviceMap () {
                 </div>
               </div>
           </SplitPane>
-          <SplitPane split="vertical" defaultSize={300} primary="first" className="sideBar">
+          <SplitPane split="vertical" defaultSize={350} primary="first" className="sideBar">
               <div className="bottom-left">
-                <SplitPane split="horizontal" defaultSize={100} primary="second">
+                <SplitPane split="horizontal" defaultSize={115} primary="second">
                   <Sidebar devices={state.devicesState} />
                   <div className="sidebar-bottom">
                     <div><button className='turnon'>Uključi svijetlo!</button></div>

@@ -91,6 +91,11 @@
 }
 
 
+
+.sidebar-bottom {
+    padding-top: 15px;
+}
+
 /* Buttons */
 button.turnon,
 button.turnoff {
