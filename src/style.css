@@ -1,2 +1,105 @@
 /* STYLE.CSS ========================= */
 
+/* Font */
+@font-face {
+    font-family: GothamRounded;
+    src: url("../src/fonts/GothamRoundedMedium_21022.ttf");
+}
+
+
+#root {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+/* Header bar */
+.header-bar {
+    background: rgb(70, 152, 203);
+    color: #fff;
+}
+
+.top-left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.logo {
+    background: url("../src/images/cm-logo.png") center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.top-right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-header {
+    font-family: GothamRounded;
+    font-size: 20px;
+    line-height: .5;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.sidebar ul li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5; 
+}
+
+.sidebar ul li .ustanova {
+    flex: 1;
+}
+.sidebar ul li .label {
+    flex-shrink: 0;
+}
+
+
+/* Buttons */
+.sidebar-bottom {
+    margin-bottom: 20px;
+}
+
+button.turnon,
+button.turnoff {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: #fff;
+    cursor: pointer;
+    font-family: GothamRounded;
+    font-size: 20px;
+}
+
+button.turnon {
+    background: rgb(70, 152, 203);
+    margin-bottom: 10px;
+}
+button.turnoff {
+    background: rgb(127,127,127);
+}
+
+
+

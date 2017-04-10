@@ -49,10 +49,10 @@ export default function DeviceMap () {
     view (props, state) {
       return (
         <SplitPane split="horizontal" defaultSize={100} primary="first">
-          <SplitPane split="vertical" defaultSize={300} primary="first">
+          <SplitPane split="vertical" defaultSize={300} primary="first" className="header-bar">
               <div className="top-left">
                 <div className="logo">
-                  Logo
+                  
                 </div>
               </div>
               <div className="top-right">
@@ -64,7 +64,7 @@ export default function DeviceMap () {
           </SplitPane>
           <SplitPane split="vertical" defaultSize={300} primary="first">
               <div className="bottom-left">
-                <SplitPane split="horizontal" defaultSize={50} primary="second">
+                <SplitPane split="horizontal" defaultSize={100} primary="second">
                   <Sidebar devices={state.devicesState} />
                   <div className="sidebar-bottom">
                     <div><button className='turnon'>Uključi svijetlo!</button></div>
