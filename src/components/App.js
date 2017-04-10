@@ -50,11 +50,17 @@ export default function DeviceMap () {
       return (
         <SplitPane split="horizontal" defaultSize={100} primary="first">
           <SplitPane split="vertical" defaultSize={300} primary="first">
-              <div className="top-left">Logo</div>
+              <div className="top-left">
+                <div className="logo">
+                  Logo
+                </div>
+              </div>
               <div className="top-right">
-                <p>Kolaboracijski projekt</p>
-                <p>Croatian Makers i HT: Zajedno smo jači</p>
-              </div>      
+                <div className="main-header">
+                  <p>Kolaboracijski projekt</p>
+                  <p>Croatian Makers i HT: Zajedno smo jači</p>
+                </div>
+              </div>
           </SplitPane>
           <SplitPane split="vertical" defaultSize={300} primary="first">
               <div className="bottom-left">
@@ -67,7 +73,7 @@ export default function DeviceMap () {
               </SplitPane>
               </div>
               <div className="bottom-right">
-                <GoogleMap markers={state.devicesState} />        
+                <GoogleMap markers={state.devicesState} />
               </div>
           </SplitPane>
       </SplitPane>

@@ -5,6 +5,7 @@ import createRecycle from 'recyclejs/react'
 import io from 'socket.io-client'
 import App from './components/App'
 import './index.css'
+import './style.css'
 
 const Recycle = createRecycle(React, Rx)
 

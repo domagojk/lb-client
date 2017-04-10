@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Sidebar (props) {
   return (
-    <div>
+    <div className="sidebar">
       Izmjerene temperature:
       <ul>
         {props.devices.map(device => (
