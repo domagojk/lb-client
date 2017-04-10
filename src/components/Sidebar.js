@@ -3,7 +3,7 @@ import React from 'react'
 export default function Sidebar (props) {
   return (
     <div className="sidebar">
-      <b>Izmjerene temperature:</b>
+      <b className="font2">Izmjerene temperature:</b>
       <ul>
         {props.devices.map(device => (
           <li key={device.deviceId}>
