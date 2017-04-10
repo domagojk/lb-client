@@ -1,8 +1,9 @@
 {
-  "main.css": "static/css/main.e2314c7f.css",
-  "main.css.map": "static/css/main.e2314c7f.css.map",
-  "main.js": "static/js/main.bd37e5fe.js",
-  "main.js.map": "static/js/main.bd37e5fe.js.map",
-  "static/media/GothamRoundedMedium_21022.ttf": "static/media/GothamRoundedMedium_21022.dffb2b80.ttf",
+  "main.css": "static/css/main.d3df53cf.css",
+  "main.css.map": "static/css/main.d3df53cf.css.map",
+  "main.js": "static/js/main.5f0315f2.js",
+  "main.js.map": "static/js/main.5f0315f2.js.map",
+  "static/media/GothamRounded-Light.otf": "static/media/GothamRounded-Light.52ef94ed.otf",
+  "static/media/GothamRounded-Medium.otf": "static/media/GothamRounded-Medium.4518b6f0.otf",
   "static/media/cm-logo.png": "static/media/cm-logo.08bba758.png"
 }
